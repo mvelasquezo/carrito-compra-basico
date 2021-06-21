@@ -1,0 +1,37 @@
+{% extends "base.html" %} 
+
+{% block title %}Inicio{% endblock %}
+
+{% block body %}
+
+<h1>Demostración de Carrito de Compra Básico<sup><a class="h-o-s-c" href="https://phppot.com/php/simple-php-shopping-cart/" target="_blank">*</a></sup></h1>
+<h2>Elaborado con PHP &laquo;desde cero&raquo; usando Twig y MVC<sub><a class="h-o-s-c" href="https://github.com/daveh/php-mvc" target="_blank">&#8224;</a></sub></h2>
+<div class="producto-cuadricula">
+    <div class="cuadricula-titulo">
+        <h3>Catálogo de productos</h3>
+    </div>
+    <div class="div-shopping-cart">
+        <a class="btn-carrito-compra apa bor-rad3" 
+            href="shopping-cart/index">carrito de compra</a>
+    </div>
+    <div class="producto-lista">
+        {% for producto in productos %}
+        <div class="producto-item" style="display: inline-block;">
+            <form method="post" action="shopping-cart/{{ cod_usr }}/agregar">
+                <input type="hidden" name="id" value="{{producto.idProducto}}" />
+
+                <div class="producto-imagen"><img src="{{producto.imagen}}"></div>
+                <div class="producto-pie-mosaico">
+                    <div class="producto-titulo">{{producto.nombre}}</div>
+                    <div class="producto-precio">{{producto.precio}}</div>
+                    <div class="producto-acciones">
+                        <input type="text" class="producto-cantidad" name="cantidad" value="1" size="2" />
+                        <input type="submit" value="Agregar" class="btn btn-accion-agregar" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+.anc-cir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    height: 48px;
+    width: 48px;
+    margin: 0;
+}
+
+.anc-cir.apa {
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.anc-cir.apa:hover{
+    background: rgba(187, 187, 187, 0.1);
+}
+
+.anc-cir.apa path {
+    fill: var(--gris);
+}
+
+.h-o-s-c {
+	font-family: 	'Roboto', sans-serif;
+	font-size: 		13px;
+	line-height: 	1.4286;
+	position: 		relative;
+	color:			#1a73e8;
+	background-color: 	transparent;
+  	text-decoration:none;
+	/*font-weight:	bold;*/
+	display:		inline-block;
+  	padding:		7px 5px;
+	border:			solid 1px transparent;
+	white-space: 	normal;
+	text-transform: none;
+	cursor:			pointer;
+	outline:		none;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	-ms-border-radius:4px;
+	-o-border-radius:4px;
+	border-radius:4px;
+	/*-webkit-font-smoothing:antialiased;
+	vertical-align:middle;
+	vertical-align:auto;
+	zoom:1;
+	*/
+}
+
+.h-o-s-c:hover, .h-o-s-c:focus {
+	background-color: #f6fafe;
+}
+
+.h-o-s-c:active {
+	background-color: #C9DDFB;
+}

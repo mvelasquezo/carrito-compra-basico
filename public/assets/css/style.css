@@ -1,0 +1,32 @@
+:root {
+	--rojo: #D00000;
+	--blanco: #FFF;
+	--azul: #0077FF;
+	--gris: #666;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #211a1a;
+    font-size: 0.9em;
+    padding: 0 10px;
+}
+
+.div-shopping-cart {
+	padding: 10px 0;
+}
+
+.apa.bor-rad3 {
+	border-radius: 3px;
+}
+
+.btn-carrito-compra {
+    padding: 5px 10px;
+}
+
+.btn-carrito-compra.apa {
+    background-color: var(--blanco);
+    border: solid 1px var(--azul);
+    color: var(--azul);
+    text-decoration: none;
+}
