@@ -17,12 +17,28 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.anc-cir.apa:hover{
+.anc-cir.apa:hover {
     background: rgba(187, 187, 187, 0.1);
+}
+
+.anc-cir.apa2 {
+	border: solid 1px rgba(187, 187, 187, 0.5);	
+}
+
+.anc-cir.apa2.som:hover {
+	box-shadow: 0 6px 14px 0 #666;
+}
+
+.anc-cir.apa2:hover {
+    background: unset;
 }
 
 .anc-cir.apa path {
     fill: var(--gris);
+}
+
+.anc-cir.apa.pth-rojo path {
+    fill: var(--rojo);
 }
 
 .h-o-s-c {
