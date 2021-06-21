@@ -73,7 +73,7 @@ class ShoppingCart extends \Core\Controller {
      *
      * @return void
      */
-    public function eliminarTodosAction() {
+    public function vaciarAction() {
         $id = $this->route_params[ 'token' ];
     
         ShoppingCartModel::eliminarTodos( $id );
