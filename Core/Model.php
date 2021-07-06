@@ -11,16 +11,13 @@ use App\Models\Resultado;
  *
  * PHP version 7.0
  */
-abstract class Model
-{
-
+abstract class Model {
     /**
      * Get the PDO database connection
      *
      * @return mixed
      */
-    protected static function getDB()
-    {
+    protected static function getDB() {
         static $db = null;
 
         if ($db === null) {
@@ -28,7 +25,7 @@ abstract class Model
             $db = new PDO($dsn, Config::DB_USER, Config::DB_PASSWORD);
 
             // Throw an Exception when an error occurs
-            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
         }
 
         return $db;

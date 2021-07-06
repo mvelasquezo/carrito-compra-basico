@@ -8,7 +8,7 @@ namespace App;
  * PHP version 7.0
  */
 
-define( 'HTTP_HOST', $_SERVER['HTTP_HOST'] );
+define( 'HTTP_HOST', $_SERVER[ 'HTTP_HOST' ] );
 
 class Config {
 

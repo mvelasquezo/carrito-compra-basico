@@ -9,8 +9,7 @@ use PDO;
  *
  * PHP version 7.0
  */
-class ProductoModel extends \Core\Model
-{
+class ProductoModel extends \Core\Model {
 
     public function __construct( $data = [] ) {
         foreach( $data as $key => $value ) {
@@ -23,10 +22,9 @@ class ProductoModel extends \Core\Model
      * @return array
      */
 
-    public static function getAll()
-    {
+    public static function getAll() {
         $db = static::getDB();
-        $stmt = $db->query("SELECT idProducto, nombre, codigo, imagen, precio FROM producto");
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $db->query( "SELECT idProducto, nombre, codigo, imagen, precio FROM producto" );
+        return $stmt->fetchAll( PDO::FETCH_ASSOC );
     }
 }
