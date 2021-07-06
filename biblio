@@ -1,0 +1,8 @@
+curso   PHP Unit Testing with PHPUnit
+seccion 7
+Titulo  Test-driven development
+video   29
+
+$ composer require --dev phpunit/phpunit
+$ composer dump-autoload
+$ alias phpunit="./vendor/phpunit/phpunit/phpunit"
