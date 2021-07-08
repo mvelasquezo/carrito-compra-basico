@@ -8,7 +8,7 @@ namespace App;
  * PHP version 7.0
  */
 
-define( 'HTTP_HOST', $_SERVER[ 'HTTP_HOST' ] );
+//define( 'HTTP_HOST', $_SERVER[ 'HTTP_HOST' ] );
 
 class Config {
 
@@ -46,5 +46,5 @@ class Config {
      * Nombre del Host de la maquina
      * @var string
      */
-    public const HOST = HTTP_HOST;
+    public const HOST = 'carrito-compra.com'; //HTTP_HOST;
 }
