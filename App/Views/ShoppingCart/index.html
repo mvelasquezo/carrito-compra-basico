@@ -2,13 +2,7 @@
 
 {% block style %} {% endblock %} 
 
-{% block title %}Inicio{% endblock %} 
-
-{% block css %}
-<link rel="stylesheet" href="/assets/css/style-shopping-cart.css" />
-<link rel="stylesheet" href="/assets/css/globitos.css" />
-<link rel="stylesheet" href="/assets/css/tblAgl.css" />
-{% endblock %} 
+{% block title %}Carrito de Compra{% endblock %} 
 
 {% block body %}
 
@@ -29,7 +23,8 @@
             </svg>
         </a>
 
-        <a class="anc-cir apa apa2 som pth-rojo" href="">
+        {% if productos is not empty %}
+        <a id="uiAncAct" class="anc-cir apa apa2 som" href="shopping-cart">
             <svg width="24" height="24" viewBox="0 0 512 512" fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -47,6 +42,7 @@
                 <g></g><g></g><g></g><g></g><g></g>
             </svg>
         </a>
+        {% endif %}
     </div>
     
     {% if productos is empty %}
@@ -66,8 +62,8 @@
     {% else %}
 
     <div style="position: absolute; right: 0; top: 0;">
-        <a class="btn-vaciar-carrito apa bor-rad3" 
-            href="/shopping-cart/{{ cod_usr }}/vaciar">Vacíar carrito</a>
+        <a id="ancVaciarCarrito" class="btn-vaciar-carrito apa bor-rad3"
+            href="/shopping-cart/{{ cod_usr }}/vaciar">Vaciar carrito</a>
     </div>
 
     <table class="tbl-agl-v2 table-hover">
@@ -92,7 +88,8 @@
                 <td data-label="Precio">{{producto.precio}}</td>
                 <td data-label="Sub Total">{{producto.sub_total}}</td>
                 <td>
-                    <a class="h-o-s-c" 
+                    <a class="h-o-s-c"
+                        data-anc="js-eli" data-listo="no"
                         href="/shopping-cart/{{ producto.idsc }}/eliminar">Eliminar</a>
                 </td>
             </tr>
@@ -102,4 +99,14 @@
     {% endif %}
 
 </div>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/assets/css/style-shopping-cart.css" />
+<link rel="stylesheet" href="/assets/css/globitos.css" />
+<link rel="stylesheet" href="/assets/css/tblAgl.css" />
+{% endblock %} 
+
+{% block script %}
+<script type="text/javascript" src="assets/js/shopping-cart/index.js"></script>
 {% endblock %}

@@ -13,14 +13,16 @@ use \App\Models\ProductoModel;
 class Home extends \Core\Controller {
 
     /**
-     * Muestra la página principal de inicio
+     * Muestra la página principal la tienda en línea
      *
      * @return void
      */
     public function indexAction() {
+        $productos = [];
+        $productos = ProductoModel::getAll();
         View::renderTemplate('Home/index.html'
             , [
-                'productos'		=> ProductoModel::getAll()
+                'productos' => $productos
             ]
         );
     }
